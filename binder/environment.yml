@@ -1,0 +1,25 @@
+name: jupyter-publish
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.7
+  - numpy >=1.14
+  - scikit-image
+  - nbdime
+  - ipypublish
+  - nbconvert
+  - pandas
+  - folium
+  - matplotlib
+  - scipy
+  - pip
+  - pip:
+      - jupyterlab_latex
+      - jupyterlab-git
+      - nbinteract
+      - jupyter-book
+      - datascience
