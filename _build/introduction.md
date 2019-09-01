@@ -4,8 +4,8 @@ prev_page:
   url: 
   title: ''
 next_page:
-  url: /jupyter_publish-1.html
-  title: 'Jupyter Publish-1'
+  url: /jupyterLab_intro.html
+  title: 'JupyterLab as a framework for Open Science by Default'
 layout: episode
 
 teaching: 20

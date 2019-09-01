@@ -1,14 +1,14 @@
 ---
-interact_link: content/C:\Users\annefou\Documents\Github\coderefinery\osip-book\jupyter_publish_osip\content\write.ipynb
+interact_link: content/C:\Users\annefou\Documents\GitHub\coderefinery\osip-book\osip\content\write.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'Publication ready scientific reports and presentations with Jupyter ecosystem'
 prev_page:
-  url: /jupyterLab_extensions.html
+  url: /jupyterLab_intro.html
   title: 'JupyterLab as a framework for Open Science by Default'
 next_page:
-  url: /jupyter_publish-1.html
-  title: 'Jupyter Publish-1'
+  url: 
+  title: ''
 layout: episode
 
 

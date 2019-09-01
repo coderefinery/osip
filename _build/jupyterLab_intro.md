@@ -31,7 +31,7 @@ questions:
 
   - "How can we use JupyterLab for Open Science by default?"
 
-  - "What are JupyterLab extension?"
+  - "What are JupyterLab extensions?"
 
   - "How can we extend JupyterLab?"
 
