@@ -1,7 +1,7 @@
 ---
 redirect_from:
-  - "jupyterlab-extensions"
-interact_link: content/C:\Users\annefou\Documents\Github\coderefinery\osip-book\jupyter_publish_osip\content\jupyterLab_extensions.ipynb
+  - "jupyterlab-intro"
+interact_link: content/C:\Users\annefou\Documents\GitHub\coderefinery\osip-book\osip\content\jupyterLab_intro.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'JupyterLab as a framework for Open Science by Default'
@@ -9,8 +9,8 @@ prev_page:
   url: /introduction.html
   title: 'Introduction'
 next_page:
-  url: /jupyter_publish-1.html
-  title: 'Jupyter Publish-1'
+  url: /write.html
+  title: 'Publication ready scientific reports and presentations with Jupyter ecosystem'
 layout: episode
 
 
