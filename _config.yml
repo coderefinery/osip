@@ -22,7 +22,7 @@ email: annefou@geo.uio.no
 description: >-
   Let's put in practice our knowledge about Open Science and initiate an Open Research project from A to Z. 
 
-baseurl: /jupyter_publish_osip         # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: /osip         # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url: http://annefou.github.io              # the base hostname & protocol for your site, e.g. http://example.com
 
 
