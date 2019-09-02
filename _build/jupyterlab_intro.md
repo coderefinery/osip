@@ -128,14 +128,13 @@ Once enabled, you can see the list of extensions installed and update/uninstall/
 {: .callout}
 
 > ## Exercise
-> Install one extension, for instance:
-> - [jupyterlab-latex](https://github.com/jupyterlab/jupyterlab-latex) for live-editing of LaTeX documents, 
-> - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and [jupyterlab-nbdime](https://nbdime.readthedocs.io/en/latest/extensions.html) for git integration, 
-> - [jupyterlab-zenodo](https://pypi.org/project/jupyterlab-zenodo/) to easily publish research work and get proper [DOI](https://www.doi.org/).
+> Which extensions do you have installed? 
 >
 > > ## Solution
-> > - Click on **DISCOVER** or type a word in **SEARCH** to find the corresponding extension 
-> > - then click on **Install** to install and enable it. During the process, you may get a message such as *A build is needed to include the latest changes*: click on **Rebuild** to continue. At the end of the process, you will be asked to **Reload** the page which is the last step of the installation process.
+> > - Click on **INSTALLED** to find extensions that are already installed:
+> >  - [jupyterlab-latex](https://github.com/jupyterlab/jupyterlab-latex) for live-editing of LaTeX documents, 
+> > - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and [jupyterlab-nbdime](https://nbdime.readthedocs.io/en/latest/extensions.html) for git integration.
+> >
 > {: .solution}
 {: .task}
 
