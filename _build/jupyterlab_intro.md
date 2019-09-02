@@ -76,10 +76,25 @@ See [JupyterLab slides](https://github.com/jupyterlab/jupyterlab-demo/blob/maste
 
 
 
+## Create a new isolated environment
+
+Whenever you start with a new research project, it is good practice to create a new **isolated** environment, for instance:
+
+-  **[conda](https://docs.conda.io/en/latest/)** to record all the dependencies, with well defined versions
+- **[docker](https://www.docker.com/)** or **[Singularity](https://sylabs.io/docs/)** containers to bundle all the necessary ingredients (data, code, environment).
+
+For this short workshop, we have prepared a [github repository](https://github.com/coderefinery/osip) to be run with [mybinder](https://mybinder.org/):
+
+- Click [here](https://mybinder.org/v2/gh/annefou/jupyter_publish_osip/master?urlpath=lab) or on the **Interact** button at the top of this page to start the workshop.
+
+![Interact button](images/interact_button.png)
+
+
+
 ## Get familiar with Jupyterlab
 
 
-Make sure you have JupyterLab installed and start it:
+Start JupyterLab:
 
 ![JupyterLab interface](images/jupyterlab.png)
 
@@ -113,7 +128,7 @@ Once enabled, you can see the list of extensions installed and update/uninstall/
 {: .callout}
 
 > ## Exercise
-> Install a few extensions such as:
+> Install one extension, for instance:
 > - [jupyterlab-latex](https://github.com/jupyterlab/jupyterlab-latex) for live-editing of LaTeX documents, 
 > - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and [jupyterlab-nbdime](https://nbdime.readthedocs.io/en/latest/extensions.html) for git integration, 
 > - [jupyterlab-zenodo](https://pypi.org/project/jupyterlab-zenodo/) to easily publish research work and get proper [DOI](https://www.doi.org/).
