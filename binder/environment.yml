@@ -16,7 +16,7 @@ dependencies:
   - matplotlib
   - scipy
   - pip
-  - gcc
+  - c-compiler
   - ruby
   - pip:
       - jupyterlab_latex
