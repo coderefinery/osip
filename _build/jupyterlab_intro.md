@@ -128,7 +128,7 @@ Once enabled, you can see the list of extensions installed and update/uninstall/
 {: .callout}
 
 > ## Exercise
-> Which extensions do you have installed? 
+> Which are the jupyterlab extensions already installed? 
 >
 > > ## Solution
 > > - Click on **INSTALLED** to find extensions that are already installed:
