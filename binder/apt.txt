@@ -4,4 +4,4 @@ latexmk
 texlive-xetex
 nano
 vim
-zlib
+ruby

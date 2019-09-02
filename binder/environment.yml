@@ -19,7 +19,6 @@ dependencies:
   - c-compiler
   - cxx-compiler
   - zlib
-  - ruby
   - pip:
       - jupyterlab_latex
       - jupyterlab-git
