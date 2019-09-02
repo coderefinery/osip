@@ -11,28 +11,44 @@ prev_page:
 next_page:
   url: /write.html
   title: 'Publication ready scientific reports and presentations with Jupyter ecosystem'
-comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
----
----
 layout: episode
+
+
 
 title: "JupyterLab as a framework for Open Science by Default"
 
+
+
 teaching: 20
+
+
 
 exercises: 25
 
+
+
 questions:
+
   - "How can we use JupyterLab for Open Science by default?"
+
   - "What are JupyterLab extensions?"
+
   - "How can we extend JupyterLab?"
+
 objectives:
+
   - "Learn to use JupyterLab for Open Science"
+
   - "Learn where to find JupyterLab extension"
+
   - "Learn how to create new JupyterLab extension"
+
 keypoints:
+
   - "JupyterLab as a tool for all phases of research process."
---
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
 
 
 
