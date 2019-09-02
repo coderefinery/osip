@@ -41,7 +41,7 @@ With practice, the time it takes to document reproducible research decreases and
 > ## Disclaimer
 > 
 > We won't give you a full overview of all the tools that could facilitate you
-> to diffuse their research's results. We have selected a few tools that can be
+> to disseminate their research's results. We have selected a few tools that can be
 > included in your scientific workflow in the hope it can reduce the time spent 
 > in writing and publishing your results.
 {: .callout}

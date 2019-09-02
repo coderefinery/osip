@@ -87,7 +87,7 @@ For this short workshop, we have prepared a [github repository](https://github.c
 
 - Click [here](https://mybinder.org/v2/gh/annefou/jupyter_publish_osip/master?urlpath=lab) or on the **Interact** button at the top of this page to start the workshop.
 
-![Interact button](images/interact_button.png)
+[![Interact button](images/interact_button.png)](https://mybinder.org/v2/gh/annefou/jupyter_publish_osip/master?urlpath=lab)
 
 
 
