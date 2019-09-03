@@ -173,7 +173,7 @@ Would render: $x^2 * x^2$
 
 -  The probability of getting (k) heads when flipping (n) coins is  
 
-  - Source:
+**Source:**
   
 ```bash
 \begin{equation*}
@@ -181,7 +181,7 @@ P(E)   = {n \choose k} p^k (1-p)^{ n-k}
 \end{equation*}
 ```
 
-  - Display:
+**Display:**
   
 $\begin{equation*}
 P(E)   = {n \choose k} p^k (1-p)^{ n-k} 
@@ -559,107 +559,18 @@ Being able to create LaTeX live documents with JupyterLab is great but we also n
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
+You can export your notebook into LaTeX:
+    
+- Select **File** --> **Export Notebook As...** --> **Export Notebook to LaTeX**.
 
+> ## Information
+> You can also generate pdf file from your notebook according you have installed LaTeX locally
+>
+{: .callout}
 
-- Add a new code cell at the end with the following information:
-
-~~~
-!nbpublish -f latex_ipypublish_all -pdf example.ipynb
-~~~
-{: .language-python}
- 
- - Execute this cell and check `converted` directory. It should contain a list of files and in particular:
-      * _example.tex_
-	  * _example.pdf_
-
-
-`nbpublish` can be called directly from your jupyter notebook or from the jupyterLab Terminal.
-
-## Cell inspector
-
-It is sometimes convenient to inspect and modify metadata of a given cell. For instance, to ignore the cell where nbpublish is run:
-
-
-~~~
-{ 
-   "ipub": {
-    "ignore": true
-  }
-}
-~~~
-{: .language-bash}
-
-Add it in the metadata of the corresponding cell, as shown in the image below:
-
-
-![jupyterlab cell inspector](../fig/jupyterlab-ipypublish.png)
-
-Do not forget to *commit changes to data*.
-
-There are several options (not only latex_ipypublish_all) to generate and customize what you would like to see in your report. 
-
-
-Check the [ipypublish documentation](https://ipypublish.readthedocs.io/en/latest/) for more information. Please note that
-the `ipypublish` python package is still under development (beta version avaiable only).
-
-> ## Add generated files into your Github repository
-> 
-> Add the updated example.ipynb, example.pdf, report_example.tex, report_example.bib and report_example.pdf to your Github
-> repository `research-bazaar-jupyter-2019` using JupyterLab git extension and/or JupyterLab Git Terminal. 
-> 
-{: .challenge}
-
-## Additional ipypublish example
-
-In this short tutorial, all the functionalities of ipypublish are not demonstrated. However, feel free to browse the [following example](https://github.com/annefou/ipypublish_example).
-
-
-# Combine our Jupyter notebooks and LaTeX documents 
-
-Now we can combine our jupyter notebook and our LaTeX document to generate a single publication ready scientific report.
-
-A very simple way to combine them is to merge the pdf generated files. Create a new text file and rename it `report_main.tex`:
-
-~~~
-\documentclass{report}
-\usepackage{pdfpages}
-\usepackage{fancyhdr}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\pagestyle{fancy}
-\rfoot{\thepage}
-\begin{document}
-\tableofcontents
-\chapter{A chapter}
-\section{Introduction}
-\includepdf[pages=1-,pagecommand={\thispagestyle{fancy}}]{report_example.pdf}
-\includepdf[pages=1-,pagecommand={\thispagestyle{fancy}}]{example.pdf}
- 
- 
-\end{document}
-~~~
-{: .language-latex}
-
-Then generate the resulting pdf files ("Show LaTeX preview"). 
-
-> ## Add generated files into your Github repository
-> 
-> As before, add report_main.tex and report_main.pdf to your Github
-> repository `research-bazaar-jupyter-2019` using JupyterLab git extension and/or JupyterLab Git Terminal. 
-> 
-{: .challenge}
 
 ```
 </div>
 
 </div>
-
-
-
-# Presentations
-
-## Markdown as slides
-
-## Exporting notebooks as slides
-
 
