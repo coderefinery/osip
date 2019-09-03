@@ -317,27 +317,22 @@ The command above assumes `osbd_workshop` folder has been created from your HOME
 The command above returns:
 
 ```
-Copying new book to: .\osip_project
+Copying new book to: ./osip_project
 Copying over your content folder...
-TOC written to: .\osip_project\_data\toc.yml
-Updating template configuration file with the values in c:\users\annefou\appdata\local\continuum\anaconda3\envs\osip2019\lib\site-packages\jupyter_book\m
-inimal\_config.yml
-
+TOC written to: ./osip_project/_data/toc.yml
+Updating template configuration file with the values in /C/users/annefou/appdata/local/continuum/anaconda3/envs/osip2019/lib/site-packages/jupyter_book/minimal/_config.yml
 
 ================================================================================
 
+Finished creating a new book at `./osip_project`
+- Your content is in `./osip_project/content`
 
-
-Finished creating a new book at `.\osip_project`
-- Your content is in `.\osip_project\content`
-
-- A Table of Contents file is at `.\osip_project\_data\toc.yml`.
+- A Table of Contents file is at `./osip_project/_data/toc.yml`.
   You should check its contents, make sure it references your
   content correctly, and ensure it has the correct order.
 
-- Your configuration file is at `.\osip_project\_config.yml`.
+- Your configuration file is at `./osip_project/_config.yml`.
   You should check its contents and double-check that the values  are correct for your site.
-
 
 Notes
 =====
@@ -345,7 +340,7 @@ Notes
   but no Table of Conents (`--toc`), we auto-generated a TOC file file using folder and file
   names. You should check its contents and clean it up so that it has the structure you want!
 
-- We've added a CC-BY-SA license for you in .\osip_project\content\LICENSE.md
+- We've added a CC-BY-SA license for you in ./osip_project/content/LICENSE.md
   This is a reasonable license for most book content, though feel free
   to change it if you like!
 
@@ -354,8 +349,10 @@ Notes
 
 A new folder `osip_project` is created. It contains many files but we will first check the files listed by `jupyter-book` command:
 
-- **osip_project\_data\toc.yml**
-- **osip_project\_config.yml**
+- `osip_project/_data/toc.yml`
+- `osip_project/_config.yml`
+
+Please note that on Windows, you would see a baskslash ($\$) instead of a slash ($/$).
 
 > ## License
 > A CC-BY-SA license has been automatically added in **osip_project\content\LICENSE.md** but feel free to update it.
@@ -368,7 +365,7 @@ Now we will be working in our book so we will change directory to `osip_project`
 cd osip_project
 ```
 
-Check the table of content **_data\toc.yml**:
+Check the table of content **_data/toc.yml**:
 
 - Files do not contain any extensions (neither `.ipynb` nor `.md`). 
 - by default files are listed by alphabetical order (feel free to update it).
@@ -411,6 +408,18 @@ git push -u origin master
 > Make sure you replace **USER** by your own github username.
 >
 {: .callout}
+
+- Enable GitHub site building for your repository
+
+![enable github pages](https://pages.github.com/images/source-setting@2x.png)
+
+Once enabled, your book is online and available at `https://USER.github.io/osip_project`.
+
+> ## Warning
+> Make sure you replace `USER` by your own github username
+>
+{: .callout}
+
 
 
 
