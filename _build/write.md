@@ -420,7 +420,74 @@ Once enabled, your book is online and available at `https://USER.github.io/osip_
 >
 {: .callout}
 
+## Interact link settings (optional)
 
+We have not fully configured our jupyter book yet, in particular to enable code interaction.
+
+Edit `_config.yml` and update it:
+
+- configure your repository:
+
+```bash
+baseurl: /osip         # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: http://USER.github.io   # the base hostname & protocol for your site, e.g. http://example.com
+```
+
+**Make sure you replace USER by your own github username**.
+
+- enable jupyterlab:
+
+```bash
+# General interact settings
+use_jupyterlab: true 
+```
+
+- Configure binder
+
+```bash
+# Binder link settings
+use_binder_button: true                 # If 'true', add a binder button for interactive links
+binderhub_url: https://mybinder.org                        # The URL for your BinderHub. If no URL, use ""
+binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
+binder_repo_org: USER                     # The username or organization that owns this repository
+binder_repo_name: osip_project                        # The name of the repository on the web
+binder_repo_branch: master                   # The branch on which your textbook is hosted.
+binderhub_interact_text: Interact              # The text that interact buttons will contain.
+```
+
+**Make sure you replace USER by your own github username**.
+
+And create a new folder called `binder` with a new file `requirements.txt`:
+
+```bash
+numpy
+matplotlib
+```
+- Enable [thebelab](https://thebelab.readthedocs.io/en/latest/):
+
+```bash
+# Thebelab settings
+use_thebelab_button: true                # If 'true', display a button to allow in-page r
+```
+
+Then rebuild your jupyter book:
+
+```bash
+jupyter-book rebuild .
+```
+
+And push the modified files to github:
+
+```bash
+git add _config.yml
+git commit -m "configure interact settings"
+git push origin master
+```
+
+
+Then check again your jupyter book online and execute code part using either **Thebelab** or **Interact** buttons:
+
+![Thebelab and Interact buttons](images/interact.png)
 
 
 
