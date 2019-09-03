@@ -56,9 +56,43 @@ JupyterLab can also be used to write and document your research to keep our rese
 
 
 
+# Start a new project
+
+Let's imagine we have a new research idea (funded project or not) and have decided to make our research reproducible and share/ collaborate from the start of the project, following **Open Science** principles.
+
+First step is to start our project and to keep it simple, we start creating a folder called `osbd_workshop` either from the command line:
+
+```
+# Create folder
+mkdir osbd_workshop
+
+# change directory to this newly created folder
+cd osbd_workshop
+```
+
+or using JupyterLab File explorer (right click in the JupyterLab file explorer and select **New Folder**):
+
+![New folder](images/new-folder.png)
+
+Then name it (`osbd_workshop`) and double click on its name to change directory.
+
+> ## Tips
+> One of the first thing we should think about when creating a new project is:
+> - Create a README file to explain wht your project is about.
+> - [Choose a license](https://choosealicense.com/)
+> These need to be done at the very beginning, before you share anything. 
+>
+{: .callout}
+
+
+
 # Live editing of Markdown documents
 
+Create a new markdown file (make sure the file is created in `osbd_project`):
+
 ![New markdown file](images/jupyterlab-markdown.png)
+
+And rename it to *index.md*.
 
 If you have an old version of JupyterLab, this **Markdown** icon may not be available; Then use the **Text** icon instead and rename your file (for instance *index.md*). Live editing of Mardkown documents is anyway available:
 
@@ -72,7 +106,7 @@ You already know a large part of markdown as the key aspect of the markdown lang
 
 If you plan to use Markdown for commenting/publishing your research work on github, an online guide for [mastering markdonw](https://guides.github.com/features/mastering-markdown/)
 
-Let's take an example (copy-paste in your newly markdown file:
+Let's take an example (copy-paste in your newly markdown file):
 
 ~~~bash
 ## Heading
@@ -128,7 +162,7 @@ To render it in Jupyterlab, right click and select **"Show Markdown Preview"**. 
 
 If you need to write equations, you can use [LaTeX mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics) notations (work both for markdown files and jupyter notebook markdown cells):
 
-```bash
+```
 $x^2 * x^2$
 ```
 
@@ -137,25 +171,21 @@ Would render: $x^2 * x^2$
 - A few other examples taken from [Notebook motivating examples](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html):
 
 
--  The Lorenz Equations  
+-  The probability of getting (k) heads when flipping (n) coins is  
 
   - Source:
   
 ```bash
-\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy
-\end{align}
+\begin{equation*}
+P(E)   = {n \choose k} p^k (1-p)^{ n-k}
+\end{equation*}
 ```
 
   - Display:
   
-\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy
-\end{align}
+$\begin{equation*}
+P(E)   = {n \choose k} p^k (1-p)^{ n-k} 
+\end{equation*}$
  
 
 So if you are using LaTeX for the ease of writing equations, markdown language may be a good solution for you! We will learn more about [LaTeX](https://www.latex-project.org/) but for now we will learn to combine Mardown files and Jupyter Notebooks to create online "books".
@@ -167,7 +197,7 @@ So if you are using LaTeX for the ease of writing equations, markdown language m
 
 ## Convert Jupyter notebooks to Markdown
 
-Any Jupyter notebook can be converted to a simple markdown file. Let's create a new python jupyter notebook (the same example could be done with any other available kernels) and make a plot (see [matplotlib gallery for examples](https://matplotlib.org/gallery.html)):
+Any Jupyter notebook can be converted to a simple markdown file. Let's create a new python jupyter notebook and rename it to `example.ipynb` (the same example could be done with any other available kernels) and make a plot (see [matplotlib gallery for examples](https://matplotlib.org/gallery.html)):
 
 
 
@@ -194,7 +224,6 @@ ax.grid()
 fig.savefig("example.png")
 plt.show()
 
-
 ```
 </div>
 
@@ -215,6 +244,8 @@ plt.show()
 
 ![Export Notebook to Markdown](images/export-markdown.png)
 
+An archive (zip/tarball) is created and contains all the converted files (one for the markdown and one file per image/pictures).
+
 > ## Remarks
 > - The utility [nbconvert](https://nbconvert.readthedocs.io/en/latest/) is used behind the scene. 
 > - **Export Notebook As...** allows you to convert your notebook in different formats (HTML, LaTeX, pdf, etc.) but some of
@@ -234,13 +265,13 @@ Converting jupyter notebooks to markdown can be useful to create live documents 
 
 ## Jupyter book
 
-For a given research project, you could easily have several Jupyter notebooks and markdown files detailing your research workflow. [jupyter-book](https://jupyter.org/jupyter-book/intro.html) can be used to build an online book using a collection of Jupyter Notebooks and Markdown files.
+For a given research project, you could easily have several Jupyter notebooks and markdown files detailing your research workflow. To be usable, it is often necessary to give additional information at least for instance the order in which markdown files and jupyter notebooks need to be read (some kind of table of content / index file). [jupyter-book](https://jupyter.org/jupyter-book/intro.html) can be used to build an online book using a collection of Jupyter Notebooks and Markdown files.
 
 In this section, we will be using `jupyter-book` to create an online book served by Github. We will follow the [online jupyter-book tutorial](https://jupyter.org/jupyter-book/guide/02_create.html).
 
 `jupyter-book` command line is not available by default and needs to be installed with `pip`:
 
-. Open a Terminal and check the availability of `jupyter-book`:
+Open a Terminal and check the availability of `jupyter-book` (accessible from the Launcher):
 
 ```bash
 jupyter-book --help
@@ -259,12 +290,127 @@ pip install jupyter-book
 
 Once installed, we can start creating a new book:
 
+- check the current working directory:
+
 ```bash
-jupyter-book create osip_project
+pwd
+```
+Move to the parent directory of `osbd_workshop` e.g. you should see `osbd_workshop` from the current directory:
+
+```bash
+ls osbd_workshop
 ```
 
-The last command has to be done from a Terminal (accessible from the Launcher).
+If the command above returns an error, change the current directory; for instance:
 
+```bash
+cd $HOME
+```
+
+The command above assumes `osbd_workshop` folder has been created from your HOME folder. Then we create a new jupyter book (`osbd_workshop` contains all the files we would like to have in our book):
+
+
+```bash
+ jupyter-book create osip_project --content osbd_workshop
+```
+
+The command above returns:
+
+```
+Copying new book to: .\osip_project
+Copying over your content folder...
+TOC written to: .\osip_project\_data\toc.yml
+Updating template configuration file with the values in c:\users\annefou\appdata\local\continuum\anaconda3\envs\osip2019\lib\site-packages\jupyter_book\m
+inimal\_config.yml
+
+
+================================================================================
+
+
+
+Finished creating a new book at `.\osip_project`
+- Your content is in `.\osip_project\content`
+
+- A Table of Contents file is at `.\osip_project\_data\toc.yml`.
+  You should check its contents, make sure it references your
+  content correctly, and ensure it has the correct order.
+
+- Your configuration file is at `.\osip_project\_config.yml`.
+  You should check its contents and double-check that the values  are correct for your site.
+
+
+Notes
+=====
+- Check your Table of Contents file (`_data/toc.yml`). Because you specified a content foler
+  but no Table of Conents (`--toc`), we auto-generated a TOC file file using folder and file
+  names. You should check its contents and clean it up so that it has the structure you want!
+
+- We've added a CC-BY-SA license for you in .\osip_project\content\LICENSE.md
+  This is a reasonable license for most book content, though feel free
+  to change it if you like!
+
+================================================================================
+```
+
+A new folder `osip_project` is created. It contains many files but we will first check the files listed by `jupyter-book` command:
+
+- **osip_project\_data\toc.yml**
+- **osip_project\_config.yml**
+
+> ## License
+> A CC-BY-SA license has been automatically added in **osip_project\content\LICENSE.md** but feel free to update it.
+>
+{: .callout}
+
+Now we will be working in our book so we will change directory to `osip_project`:
+
+```bash
+cd osip_project
+```
+
+Check the table of content **_data\toc.yml**:
+
+- Files do not contain any extensions (neither `.ipynb` nor `.md`). 
+- by default files are listed by alphabetical order (feel free to update it).
+
+> ## Customize your book
+> - Edit **_config.yml** and update the title, author and description
+{: .task}
+
+The content of your book is in the `content` folder. 
+If you change any of the files in the `content` folder, you need to re-generate our new jupyter book:
+
+```bash
+jupyter-book build .
+```
+
+Your Jupyter Book is in `_build/` and we are now ready to publish it on github.
+
+## Publish your book online with GitHub Pages
+
+- Create a new git repository (make sure you are in `osip_project` folder):
+
+```bash
+git init
+git add .
+git commit -m "Publish my research project book"
+```
+
+- Create a new **empty** repository (name it `osip_project`) on Github (make sure you do not add any README or license file)- 
+
+![New github repository](images/github-jupyter-book.png)
+
+- Push your local repository to Github
+
+```bash
+git remote add origin git@github.com:USER/osip_project.git
+git push -u origin master
+```
+
+> ## Warning
+> Make sure you replace **USER** by your own github username.
+>
+{: .callout}
 
 
 
