@@ -158,7 +158,113 @@ Would render: $x^2 * x^2$
 \end{align}
  
 
-So if you are using LaTeX for the ease of writing equations, markdown language may be a good solution for you!
+So if you are using LaTeX for the ease of writing equations, markdown language may be a good solution for you! We will learn more about [LaTeX](https://www.latex-project.org/) but for now we will learn to combine Mardown files and Jupyter Notebooks to create online "books".
+
+
+
+
+# Create online Jupyter book
+
+## Convert Jupyter notebooks to Markdown
+
+Any Jupyter notebook can be converted to a simple markdown file. Let's create a new python jupyter notebook (the same example could be done with any other available kernels) and make a plot (see [matplotlib gallery for examples](https://matplotlib.org/gallery.html)):
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+%matplotlib inline
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data for plotting
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+        title='About as simple as it gets, folks')
+ax.grid()
+
+fig.savefig("example.png")
+plt.show()
+
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+{:.output_png}
+![png](images/write_4_0.png)
+
+</div>
+</div>
+</div>
+
+
+
+- Then browse the **File** menu and select **Export Notebook As...** and **Export Notebook to Markdown**.
+
+
+![Export Notebook to Markdown](images/export-markdown.png)
+
+> ## Remarks
+> - The utility [nbconvert](https://nbconvert.readthedocs.io/en/latest/) is used behind the scene. 
+> - **Export Notebook As...** allows you to convert your notebook in different formats (HTML, LaTeX, pdf, etc.) but some of
+> these options may need to be configured to work properly.
+{: .callout}
+
+
+
+Converting jupyter notebooks to markdown can be useful to create live documents on the web (for instance by pushing them on Github).
+
+> ## Note
+> Jupyter notebooks are rendered automatically by Github too without having to convert them to markdown.
+> However, it makes it difficult when using jupyter widgets or any interactive notebooks.
+>
+{: .callout}
+
+
+## Jupyter book
+
+For a given research project, you could easily have several Jupyter notebooks and markdown files detailing your research workflow. [jupyter-book](https://jupyter.org/jupyter-book/intro.html) can be used to build an online book using a collection of Jupyter Notebooks and Markdown files.
+
+In this section, we will be using `jupyter-book` to create an online book served by Github. We will follow the [online jupyter-book tutorial](https://jupyter.org/jupyter-book/guide/02_create.html).
+
+`jupyter-book` command line is not available by default and needs to be installed with `pip`:
+
+. Open a Terminal and check the availability of `jupyter-book`:
+
+```bash
+jupyter-book --help
+```
+
+If you get an error message such as:
+```
+bash: jupyter-book: command not found
+```
+
+Then you need to install `jupyter-book`:
+
+```bash
+pip install jupyter-book
+```
+
+Once installed, we can start creating a new book:
+
+```bash
+jupyter-book create osip_project
+```
+
+The last command has to be done from a Terminal (accessible from the Launcher).
+
 
 
 
@@ -290,9 +396,16 @@ The `pdf` preview of your document will appear on the right hand side of Jupyter
 
 Being able to create LaTeX live documents with JupyterLab is great but we also need to make use of our jupyter notebooks so we can create a reproducible research work, share it and publish it.
 
-Let's go back to our jupyter notebook example and let's create a nice LaTeX document from it.
+- Close `report_example.tex` and `report_example.pdf` and open a new python 3 jupyter notebook (rename it `example.ipynb`).
 
-- Close `report_example.tex` and `report_example.pdf` and open `example.ipynb`.
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+
+
 - Add a new code cell at the end with the following information:
 
 ~~~
@@ -346,7 +459,7 @@ the `ipypublish` python package is still under development (beta version avaiabl
 In this short tutorial, all the functionalities of ipypublish are not demonstrated. However, feel free to browse the [following example](https://github.com/annefou/ipypublish_example).
 
 
-# Combine our Jupyter notebooks and LaTeX documents
+# Combine our Jupyter notebooks and LaTeX documents 
 
 Now we can combine our jupyter notebook and our LaTeX document to generate a single publication ready scientific report.
 
@@ -381,17 +494,10 @@ Then generate the resulting pdf files ("Show LaTeX preview").
 > 
 {: .challenge}
 
-
-
-# Jupyter book to create online book from Jupyter notebooks and markdown files
-
-## Jupyter book
-
-A solution to build an online book using a collection of Jupyter Notebooks and Markdown files.
-
-```bash
-pip install jupyter-book
 ```
+</div>
+
+</div>
 
 
 
