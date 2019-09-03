@@ -12,6 +12,8 @@ keypoints:
   - "Open science is simply science."
 ---
 
+# Document your work to realize the full benefit of Open Science
+
 To embrace Open Science is like to lay the foundation of your scientific work on a cooperative process, and to use many different ways for disseminating the results of your research to be as inclusive as possible.
 
 Achieving this requires an open approach at all stages of the research and assumes that you have identified the key actors i.e. your target audience. 
@@ -34,7 +36,7 @@ Ideally, this process should not require much more time and/or efforts.
 
 In this workshop, we aim at giving you a few tips towards Open Science and at exploring tools to convert your well documented notebook into various formats suited for disseminating your research through different media.
 
-We are going to use JupiterLab as a research environment where it will be possible to write texts and codes to process data and produce plots, then modify all these in an "agile" process where others can be involved all the way, instead of magically publishing **THE** final result.
+We are going to use JupyterLab as a research environment where it will be possible to write texts and codes to process data and produce plots, then modify all these in an "agile" process where others can be involved all the way, instead of magically publishing **THE** final result.
 
 With practice, the time it takes to document reproducible research decreases and the **benefit for your own research** increases.
 
