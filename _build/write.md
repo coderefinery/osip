@@ -623,9 +623,6 @@ Being able to create LaTeX live documents with JupyterLab is great but we also n
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
 You can export your notebook into LaTeX:
     
 - Select **File** --> **Export Notebook As...** --> **Export Notebook to LaTeX**.
@@ -635,9 +632,4 @@ You can export your notebook into LaTeX:
 >
 {: .callout}
 
-
-```
-</div>
-
-</div>
 
