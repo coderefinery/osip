@@ -87,7 +87,7 @@ For this short workshop, we have prepared a [github repository](https://github.c
 
 - Click [here](https://mybinder.org/v2/gh/annefou/jupyter_publish_osip/master?urlpath=lab) or on the **Interact** button at the top of this page to start the workshop.
 
-[![Interact button](images/interact_button.png)](https://mybinder.org/v2/gh/annefou/jupyter_publish_osip/master?urlpath=lab)
+[![Interact button](images/interact_button.png)](https://mybinder.org/v2/gh/coderefinery/osip/master?urlpath=lab)
 
 
 
@@ -107,18 +107,6 @@ You can also run the [JupyterLab demo](https://github.com/jupyterlab/jupyterlab-
 The JupyterLab Graphical User Interface varies depending on the available kernels (`python`, `R`, `julia`, etc.) but also on the [JupyterLab extensions](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html) you have installed.
 And this is where JupyterLab differs from the "classical" Jupyter Notebooks.
 
-> ## JupyterLab extension Manager
->
-> Enable **Extension Manager**
-> <img src="https://jupyterlab.readthedocs.io/en/stable/_images/extension_manager_enable_manager.png" />
-> **Figure:** The default view has three components: a search bar, an "Installed" section, and a "Discover" section.
->
-{: .task}
-
-Once enabled, you can see the list of extensions installed and update/uninstall/disable them. With **SEARCH**, you can find and install available extensions.
-
-![JupyterLab interface](images/jupyterlab_extension_manager.png)
-
 > ## Warning
 > JupyterLab extensions make JupyterLab highly flexible and can really offer a fully customized user environment but 
 > the following recommendations are **important**:
@@ -127,16 +115,20 @@ Once enabled, you can see the list of extensions installed and update/uninstall/
 >
 {: .callout}
 
-> ## Exercise
-> Which are the jupyterlab extensions already installed? 
+
+Several extensions have been installed for you to try:
+
+- [jupyterlab-latex](https://github.com/jupyterlab/jupyterlab-latex) for live-editing of LaTeX documents, 
+- [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and [jupyterlab-nbdime](https://nbdime.readthedocs.io/en/latest/extensions.html) for git integration.
+
+
+In new version of JupyterLab, an [extension Manager](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html) has been included to facilitate the management of extensions in JupyterLab. 
+
+> ## Remark
+> When using JupyterLab through binder, installation of additional extensions is usually not possible.
 >
-> > ## Solution
-> > - Click on **INSTALLED** to find extensions that are already installed:
-> >  - [jupyterlab-latex](https://github.com/jupyterlab/jupyterlab-latex) for live-editing of LaTeX documents, 
-> > - [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) and [jupyterlab-nbdime](https://nbdime.readthedocs.io/en/latest/extensions.html) for git integration.
-> >
-> {: .solution}
-{: .task}
+{: .callout}
+
 
 
 

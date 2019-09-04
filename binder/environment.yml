@@ -6,7 +6,6 @@ channels:
 dependencies:
   - python=3.7
   - numpy >=1.14
-  - jupyterlab >=1.1.1
   - jupytext>=1.2.0rc0
   - scikit-image
   - nbdime

@@ -63,6 +63,8 @@ Let's imagine we have a new research idea (funded project or not) and have decid
 First step is to start our project and to keep it simple, we start creating a folder called `osbd_workshop` either from the command line:
 
 ```
+# change directory to user HOME area
+cd $HOME
 # Create folder
 mkdir osbd_workshop
 
