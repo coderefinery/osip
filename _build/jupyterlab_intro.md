@@ -125,8 +125,10 @@ Several extensions have been installed for you to try:
 In new version of JupyterLab, an [extension Manager](https://jupyterlab.readthedocs.io/en/stable/user/extensions.html) has been included to facilitate the management of extensions in JupyterLab. 
 
 > ## Remark
-> When using JupyterLab through binder, installation of additional extensions is usually not possible.
->
+> When using JupyterLab through binder
+> - installation of additional extensions is usually not possible.
+> - [configuration of git](https://swcarpentry.github.io/git-novice/02-setup/index.html) (and github for accessing remote repositories) needs to be done.
+> 
 {: .callout}
 
 
