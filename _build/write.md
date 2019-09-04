@@ -1,5 +1,5 @@
 ---
-interact_link: content/C:\Users\annefou\Documents\Github\coderefinery\osip-book\osip\content\write.ipynb
+interact_link: content/write.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'Publication ready scientific reports and presentations with Jupyter ecosystem'
@@ -151,10 +151,28 @@ To render it in Jupyterlab, right click and select **"Show Markdown Preview"**. 
 > ## Create website on Github
 > 
 > Github gives you the opportunity to host webpages and for getting this functionality you need:
-> - Push your markdown files in a Github repository and make sure you name the main file `index.md`
+> - Create a new Github repository named `osbd_workshop` but do **NOT** initialize your repository (no license and no README)
+> - [Set up git](https://swcarpentry.github.io/git-novice/02-setup/index.html) if you have not done it yet:
+>
+> ```bash
+> git config --global user.name "Vlad Dracula"
+> git config --global user.email "vlad@tran.sylvan.ia"
+> git config --global core.autocrlf input
+> ```
+> Where you should put your own name and email!
+>
+> - Follow the instructions given online (after you created your empty repo) 
+> and push your markdown files in a Github repository and make sure you name the main file `index.md`
+> ```bash
+>  git remote add origin https://github.com/USER/osbd_workshop.git
+>  git push -u origin master
+> ```
+> **Always change USER by your github username**.
+>  You will have to authenticate yourself to push your changes.
+> - [Choose and add a licence](https://choosealicense.com/)
 > - Enable Github pages for your repository:
 > ![enable github pages](https://pages.github.com/images/source-setting@2x.png)
-> 
+> Your website is now online at `http://USER.github.io/osbd_workshop` (Change **USER** to your github username)
 > More information can be found [here](https://pages.github.com/)
 >
 {: .callout}
@@ -170,25 +188,7 @@ $x^2 * x^2$
 
 Would render: $x^2 * x^2$
 
-- A few other examples taken from [Notebook motivating examples](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html):
-
-
--  The probability of getting (k) heads when flipping (n) coins is  
-
-**Source:**
-  
-```bash
-\begin{equation*}
-P(E)   = {n \choose k} p^k (1-p)^{ n-k}
-\end{equation*}
-```
-
-**Display:**
-  
-$\begin{equation*}
-P(E)   = {n \choose k} p^k (1-p)^{ n-k} 
-\end{equation*}$
- 
+You can find a few other examples at [Notebook motivating examples](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html). 
 
 So if you are using LaTeX for the ease of writing equations, markdown language may be a good solution for you! We will learn more about [LaTeX](https://www.latex-project.org/) but for now we will learn to combine Mardown files and Jupyter Notebooks to create online "books".
 
@@ -199,7 +199,9 @@ So if you are using LaTeX for the ease of writing equations, markdown language m
 
 ## Convert Jupyter notebooks to Markdown
 
-Any Jupyter notebook can be converted to a simple markdown file. Let's create a new python jupyter notebook and rename it to `example.ipynb` (the same example could be done with any other available kernels) and make a plot (see [matplotlib gallery for examples](https://matplotlib.org/gallery.html)):
+Any Jupyter notebook can be converted to a simple markdown file. 
+
+Let's create a new python jupyter notebook and rename it to `example.ipynb` (the same example could be done with any other available kernels) and make a plot (see [matplotlib gallery for examples](https://matplotlib.org/gallery.html)):
 
 
 
@@ -354,7 +356,7 @@ A new folder `osip_project` is created. It contains many files but we will first
 - `osip_project/_data/toc.yml`
 - `osip_project/_config.yml`
 
-Please note that on Windows, you would see a baskslash ($\$) instead of a slash ($/$).
+Please note that on Windows, you would see a baskslash character instead of a slash for folder separator.
 
 > ## License
 > A CC-BY-SA license has been automatically added in **osip_project\content\LICENSE.md** but feel free to update it.
@@ -402,8 +404,8 @@ git commit -m "Publish my research project book"
 - Push your local repository to Github
 
 ```bash
-git remote add origin git@github.com:USER/osip_project.git
-git push -u origin master
+>  git remote add origin https://github.com/USER/osip_project.git
+>  git push -u origin master
 ```
 
 > ## Warning
@@ -418,7 +420,8 @@ git push -u origin master
 Once enabled, your book is online and available at `https://USER.github.io/osip_project`.
 
 > ## Warning
-> Make sure you replace `USER` by your own github username
+> - Make sure you replace `USER` by your own github username.
+> - It may take a few minutes to get your book online.
 >
 {: .callout}
 
@@ -459,7 +462,7 @@ binderhub_interact_text: Interact              # The text that interact buttons 
 
 **Make sure you replace USER by your own github username**.
 
-And create a new folder called `binder` with a new file `requirements.txt`:
+Update `requirements.txt`:
 
 ```bash
 numpy
@@ -490,6 +493,12 @@ git push origin master
 Then check again your jupyter book online and execute code part using either **Thebelab** or **Interact** buttons:
 
 ![Thebelab and Interact buttons](images/interact.png)
+
+> ## Remark
+>
+> Instead of having a unique `requirements.txt` file for binder, you can create a new folder called `binder` (see [binder user documentation](https://mybinder.readthedocs.io/en/latest/using.html) for more information).
+>
+{: .callout}
 
 
 

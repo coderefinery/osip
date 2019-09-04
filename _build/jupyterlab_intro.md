@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - "jupyterlab-intro"
-interact_link: content/C:\Users\annefou\Documents\Github\coderefinery\osip-book\osip\content\jupyterlab_intro.ipynb
+interact_link: content/jupyterlab_intro.ipynb
 kernel_name: python3
 has_widgets: false
 title: 'JupyterLab as a framework for Open Science by Default'
