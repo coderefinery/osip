@@ -2,7 +2,7 @@
 interact_link: content/write.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Publication ready scientific reports and presentations with Jupyter ecosystem'
+title: 'Publication ready scientific reports, website and presentations with Jupyter ecosystem'
 prev_page:
   url: /jupyterlab_intro.html
   title: 'JupyterLab as a framework for Open Science by Default'
